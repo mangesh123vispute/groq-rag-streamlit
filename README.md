@@ -1,4 +1,5 @@
 # Agentic RAG Project
+<img width="1912" height="846" alt="image" src="https://github.com/user-attachments/assets/74e1332e-7d46-4531-998c-eabe6b66042d" />
 
 A small **agentic Retrieval-Augmented Generation (RAG)** demo built with:
 
