@@ -1,0 +1,7 @@
+# Streamlit's default file watcher walks all imported packages. `transformers` then
+# lazy-loads many vision modules that import `torchvision`. Without torchvision,
+# that spams tracebacks. Disabling the watcher avoids that; reload the app manually
+# after code changes, or run with: streamlit run streamlit_app.py --server.fileWatcherType none
+
+[server]
+fileWatcherType = "none"

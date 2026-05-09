@@ -1,0 +1,30 @@
+[project]
+name = "ragdemo"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "beautifulsoup4>=4.13.4",
+    "faiss-cpu>=1.12.0",
+    "langchain>=0.3.27",
+    "langchain-community>=0.3.27",
+    # langchain-core 0.3.86+ pulls langchain-protocol (PEP 728 TypedDict extra_items) → needs Python 3.13+
+    "langchain-core>=0.3.72,<0.3.86",
+    # 1.x needs langchain-core 0.3.86+ (ModelProfile); that stack needs Python 3.13+ (langchain-protocol).
+    "langchain-groq>=0.3.0,<1.0.0",
+    # 1.x requires langchain-core 1.x and breaks the 0.3.x stack used with Groq on Python 3.12.
+    "langchain-huggingface>=0.3.0,<1.0.0",
+    "langchain-openai>=0.3.30",
+    "langchain-text-splitters>=0.3.0",
+    "langgraph>=0.6.5",
+    "openai>=1.99.9",
+    "pydantic>=2.11.7",
+    "pypdf>=6.0.0",
+    "python-dotenv>=1.1.1",
+    "requests>=2.32.4",
+    "sentence-transformers>=2.2.0",
+    # Pulled in by many `transformers` vision code paths; avoids ModuleNotFoundError when Streamlit or tools import the package tree
+    "torchvision>=0.19.0",
+    "streamlit>=1.48.1",
+]

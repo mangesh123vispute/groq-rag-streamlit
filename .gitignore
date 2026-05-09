@@ -1,0 +1,17 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Secrets — never commit API keys
+.env
+.env.local
+
+# User-uploaded documents (keep folder locally; optional: commit samples only)
+data/uploads/
